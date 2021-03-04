@@ -1,0 +1,51 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap");
+
+// Colors
+$clr-white: #fff;
+$clr-primary-1: #75a3a3;
+$clr-primary-2: #a3c2c2;
+$clr-primary-3: #d1e0e0;
+$clr-primary-4: #527a7a;
+$clr-button: rgb(36, 32, 32);
+
+// Rest
+$transition: all 0.3s linear;
+$spacing: 0.25rem;
+$radius: 0.5rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+// Shared properties
+%btn-shared {
+  text-transform: uppercase;
+  background: $clr-primary-1;
+  color: white;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: $spacing;
+  display: inline-block;
+  transition: $transition;
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  &:hover {
+    @extend %btn-hover;
+  }
+}
+
+%btn-hover {
+  color: $clr-button;
+  background: $clr-primary-2;
+}
+
+// Mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// Breakpoints
+$breakpoint-tablet: 768px;
