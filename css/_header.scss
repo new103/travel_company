@@ -1,5 +1,7 @@
 @import "variables";
 
+// Elementy są zagnieżdżone
+
 header {
   .hero {
     min-height: 100vh;
@@ -12,6 +14,7 @@ header {
       padding: 0 3rem;
 
       h1 {
+        color: $clr-white;
         text-transform: uppercase;
       }
 
