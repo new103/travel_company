@@ -1,0 +1,67 @@
+@import "variables";
+
+.contact {
+  background: $clr-primary-1;
+}
+
+.contact-title {
+ h3 {
+   color: $clr-white;
+ }
+
+ p {
+   color: $clr-primary-3;
+ }
+}
+
+.contact-form {
+  display: flex;
+  max-width: 28rem;
+
+  .form-control {
+    flex: 1 1 auto;
+  }
+
+  .form-control,
+  .btn-submit {
+    padding: 0.37rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    letter-spacing: $spacing;
+    background: $clr-white;
+    text-transform: capitalize;
+    border: transparent;
+  }
+
+  .form-control::placeholder {
+    color: inherit;
+  }
+
+  .btn-submit {
+    margin-left: .5rem;
+    background: $clr-primary-3;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+background: $clr-primary-2;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-form {
+    align-self: start;
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding-left: 2rem;
+  }
+}
+

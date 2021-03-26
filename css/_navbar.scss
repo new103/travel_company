@@ -1,0 +1,135 @@
+@import 'variables';
+
+.nav-logo {
+  width: 100px;
+  height: 105px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $clr-white;
+  width: 100%;
+  box-shadow: $dark-shadow;
+  z-index: 2;
+}
+
+.nav-icons {
+  display: none;
+}
+
+.nav-center {
+  // background: pink;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: none;
+  transition: $transition;
+}
+
+.nav-toggle:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.nav-toggle i {
+  font-size: 1.5rem;
+  color: $clr-primary-1;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  letter-spacing: $spacing;
+  transition: $transition;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background: $clr-primary-2;
+  padding-left: 2.25rem;
+  border-left: 5px solid $clr-primary-4;
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: $transition;
+}
+
+.display-links {
+  height: 245px;
+  transition: $transition;
+}
+
+@media screen and (min-width: 992px) {
+
+  // hidde toggle button
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+
+    // optional:
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    // jak 100% jest przez chwile widoczne menu podczas zmniejszania
+    height: auto;
+    display: flex;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-link {
+    // problem jak nie będzie 0;
+    padding: 0;
+    margin-right: 1.5rem;
+  }
+
+  .nav-link:hover {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: $clr-primary-1;
+    // font-weight: 800;
+  }
+
+
+  .nav-icons {
+    display: flex;
+
+  }
+
+  .nav-icons li a i {
+    font-size: 1.5rem;
+    margin-right: .8rem;
+    transition: $transition;
+  }
+
+  .nav-icons li a i:hover {
+    color: $clr-primary-1;
+  }
+}

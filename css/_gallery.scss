@@ -1,0 +1,54 @@
+@import 'variables';
+
+.gallery-img-container {
+  background: $clr-primary-4;
+  position: relative;
+
+  &:hover .gallery-img {
+    opacity: .5;
+  }
+
+  &:hover .gallery-icon i {
+    opacity: 1;
+  }
+
+  .gallery-icon {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    transition: $transition;
+
+    i {
+      font-size: 2rem;
+      opacity: 0;
+      transition: $transition;
+      color: $clr-white;
+    }
+  }
+
+  .gallery-img {
+    height: 17rem;
+    object-fit: cover;
+    transition: $transition;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-img-container {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .gallery-img-container {
+    flex: 0 0 25%;
+  }
+}

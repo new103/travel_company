@@ -2,11 +2,18 @@
 @import "./header";
 @import "./about";
 @import "./services";
+@import "./featuredTours";
+@import './contact';
+@import './gallery';
+@import './footer';
+@import './navbar';
+
 
 // Global styles
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -30,7 +37,7 @@ a {
   text-decoration: none;
 }
 
-img {
+img:not(.nav-logo) {
   display: block;
   width: 100%;
 }
